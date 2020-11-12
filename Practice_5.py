@@ -1,5 +1,8 @@
-def check_spec_symbol (arg):
-    if arg[len(arg)-1] == '#':
+def check_spec_symbol(arg):
+    # Функция проверяет специальный символ, для выхода из цикла.
+    # Возвращает True or False в зависимости от наличия специального символа в arg
+
+    if arg[len(arg) - 1] == '#':
         arg = arg[:len(arg) - 1]
         summator(arg)
         return False
@@ -8,6 +11,10 @@ def check_spec_symbol (arg):
 
 
 def summator(arg):
+    # Сумматор для строки чисел, записанных через " "
+    # Ничего не возвращает, сразу пишет результат в консоли
+    # Работает с глобальным параметром current_sum
+
     global current_sum
     sum_el = [int(item) for item in arg.split()]
     current_sum += sum(sum_el)
