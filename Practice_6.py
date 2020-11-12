@@ -1,4 +1,7 @@
 def int_func(str):
+
+# Функция возвращает строку изменяя первую букву на большую
+
     return str.capitalize()
 
 
